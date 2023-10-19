@@ -28,7 +28,6 @@
                 }
             }
 
-            //test mac 23
 
             
             //funktion som räknar ut median åldern fler en lista
