@@ -31,7 +31,8 @@
             //test
             //test2
             //test3
-
+            //test mac
+            //test mac 2
             
             //funktion som räknar ut median åldern fler en lista
 
