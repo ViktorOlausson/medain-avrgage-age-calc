@@ -29,6 +29,7 @@
             }
 
             //test
+            //test2
 
             
             //funktion som räknar ut median åldern fler en lista
