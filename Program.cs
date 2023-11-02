@@ -65,7 +65,10 @@
                 Console.WriteLine("Skriv in fördlseår med fyra siffror, eller q för att avsluta: ");
                 string string_birth_year = Console.ReadLine();
 
-                if (string_birth_year.ToLower = "q");
+                if (string_birth_year.ToLower() == "q")
+                {
+                    return;
+                }
                    
             } 
 
