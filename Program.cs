@@ -9,12 +9,14 @@
 
             //tomma listor för män och kvinnor
 
-            //TODO?: gör om till classer??
+            //TOODOO?: gör om till classer??
             //int[] man_list = { };
             //int[] kvinna_list = { };
 
             List<int> man_list = new List<int>();
             List<int> kvinna_list = new List<int>();
+            //DOING: Lista för alla, ska bli separata för kvinnor och män
+            List<int> lista_alla = new List<int>();
 
 
             List<int> testlista = new List<int>() {1,2,3,4,5 };
@@ -23,16 +25,16 @@
 
             // Funktion som räknar ut medelåldern från en lista med åldrar
 
-            static double calc_mean_age(List<int> lista)
+            static double calc_mean_age(List<int> list)
             {
-                if (lista.Count == 0)
+                if (list.Count == 0)
                 {
                     return 0;
                 }
                 else
                 {
-                    int sumAges = lista.Sum();
-                    double meanAge = (double)sumAges / lista.Count;
+                    int sumAges = list.Sum();
+                    double meanAge = (double)sumAges / list.Count;
                     return meanAge;
                 }
             }
@@ -41,25 +43,25 @@
 
             //funktion som räknar ut median åldern fler en lista
 
-            static double calc_median_age(int[] arr)
+            static double calc_median_age(List<int> list)
             {
-                if (arr.Length == 0)
+                if (list.Count == 0)
                 {
                     return 0;
                 }
                 else
                 {
-                    Array.Sort(arr);
-                    int middle = arr.Length / 2;
+                    //Array.Sort(list);//todo: måste srkiva en function som sorterar en list
+                    int middle = list.Count / 2;
                     double medianAge;
 
-                    if (arr.Length % 2 == 0)
+                    if (list.Count % 2 == 0)
                     {
-                        medianAge = (arr[middle - 1] + arr[middle]) / 2;
+                        medianAge = (list[middle - 1] + list[middle]) / 2;
                     }
                     else
                     {
-                        medianAge = arr[middle];
+                        medianAge = list[middle];
                     }
 
                     return medianAge;
