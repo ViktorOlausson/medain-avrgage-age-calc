@@ -8,22 +8,31 @@
             int c_year = DateTime.Now.Year;
 
             //tomma listor för män och kvinnor
-            int[] man_list = { };
-            int[] kvinna_list = { };
+
+            //TODO?: gör om till classer??
+            //int[] man_list = { };
+            //int[] kvinna_list = { };
+
+            List<int> man_list = new List<int>();
+            List<int> kvinna_list = new List<int>();
+
+
+            List<int> testlista = new List<int>() {1,2,3,4,5 };
+            List<int> testlistTom = new List<int>();
 
 
             // Funktion som räknar ut medelåldern från en lista med åldrar
 
-            static double calc_mean_age(int[] arr)
+            static double calc_mean_age(List<int> lista)
             {
-                if (arr.Length == 0)
+                if (lista.Count == 0)
                 {
                     return 0;
                 }
                 else
                 {
-                    int sumAges = arr.Sum();
-                    double meanAge = (double)sumAges / arr.Length;
+                    int sumAges = lista.Sum();
+                    double meanAge = (double)sumAges / lista.Count;
                     return meanAge;
                 }
             }
@@ -73,7 +82,7 @@
                     break;
                 }
 
-                int birth_year = int.Parse(str_birth_year_input);//FIXME: Kastar error om input inte är int eller q
+                int birth_year = int.Parse(str_birth_year_input);//FIXME: Kastar error om input inte är int eller q och om input är för stor
 
                 /*try
                 {
@@ -100,7 +109,8 @@
 
             //Loopar som skriver ut medelåldern men endast om det finns någon data
 
-
+            Console.WriteLine(calc_mean_age(testlista));
+            
 
         }
     }
