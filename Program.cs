@@ -1,6 +1,7 @@
 ﻿namespace ConsoleApp1
 {
     internal class Program
+        //IDEER: kunna ange ett kommando för att visa nu varande resultat?
     {
         static void Main(string[] args)
         {
@@ -13,10 +14,10 @@
             //int[] man_list = { };
             //int[] kvinna_list = { };
 
-            List<int> man_list = new List<int>();
-            List<int> kvinna_list = new List<int>();
+            List<double> man_list = new List<double>();
+            List<double> kvinna_list = new List<double>();
             //DOING: Lista för alla, ska bli separata för kvinnor och män
-            List<int> lista_alla = new List<int>();
+            List<double> list_alla = new List<double>();
 
 
             //Test listor
