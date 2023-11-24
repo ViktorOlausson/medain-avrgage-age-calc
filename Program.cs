@@ -19,7 +19,8 @@
             List<int> lista_alla = new List<int>();
 
 
-            List<int> testlista = new List<int>() {1,2,3,4,5 };
+            //Test listor
+            List<double> testlista = new List<double>() {1,2,3,4,5, 6 };
             List<int> testlistTom = new List<int>();
 
 
@@ -43,7 +44,7 @@
 
             //funktion som räknar ut median åldern fler en lista
 
-            static double calc_median_age(List<int> list)
+            static double calc_median_age(List<double> list)
             {
                 if (list.Count == 0)
                 {
@@ -51,7 +52,8 @@
                 }
                 else
                 {
-                    //Array.Sort(list);//todo: måste srkiva en function som sorterar en list
+                    double[] listArr = list.ToArray();
+                    Array.Sort(listArr);//TOODOO?: Göra en riktigt sorting function somär snabbare?
                     int middle = list.Count / 2;
                     double medianAge;
 
@@ -111,7 +113,7 @@
 
             //Loopar som skriver ut medelåldern men endast om det finns någon data
 
-            Console.WriteLine(calc_mean_age(testlista));
+            Console.WriteLine(calc_median_age(testlista));
             
 
         }
