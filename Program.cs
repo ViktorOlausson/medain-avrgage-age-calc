@@ -21,7 +21,7 @@
 
 
             //Test listor
-            List<double> testlista = new List<double>() {1,2,3,4,5, 6 };
+            List<double> testlista = new List<double>() {1,2,3,4,5, 6,7 ,7 };
             List<int> testlistTom = new List<int>();
 
 
